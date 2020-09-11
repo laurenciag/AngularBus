@@ -1,0 +1,34 @@
+<div class="container-fluid">
+
+    <!-- Page Heading -->
+    <h1 class="h3 mb-2 text-gray-800">Agency Details</h1>
+    <p class="mb-4">Details for Agency</p>
+
+    <!-- <form id="formAgency" action="#" method="POST"> -->
+        <div class="row">
+            <div class="card mr-5" th:object="${agency}" method="POST">
+                <div class="card-body">
+                    <img src="https://consequenceofsound.net/wp-content/uploads/2019/05/pikachu-e1557247424342.jpg?quality=80"
+                        alt="..." class="img-shown">
+                    <p></p>
+                </div>
+            </div>
+            <div class="card" style="width: 500px;">
+                <div class="card-body">
+                    <p>Agency Name</p>
+                    <div class="form-group">
+                        <input type="text" class="form-control form-control-user" id="inputAgencyName"
+                        [(ngModel)]="agency.agencyName"></div>
+                    <p>Agency Detail</p>
+                    <div class="form-group">
+                        <input type="text" class="form-control form-control-user" id="inputAgencyDetails"
+                        [(ngModel)]="agency.agencyDetails"></div>
+                </div>
+                <button type="submit" class="btn btn-secondary btn-user btn-block" (click)="editAgency()">
+                    Update Agency
+                </button>
+            </div>
+            <!-- </form> -->
+        </div>
+    <!-- </form> -->
+</div>
